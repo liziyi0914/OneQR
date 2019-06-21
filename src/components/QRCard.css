@@ -1,0 +1,13 @@
+
+.qrcard {
+	text-align: center;
+}
+
+.qrcard_title {
+	background-Color: 'white';
+	padding: 1em;
+}
+
+.qrcard_content {
+	padding: 1em;
+}

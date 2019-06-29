@@ -1,9 +1,10 @@
 import React,{ Component } from 'react';
+import { connect } from 'dva';
 import QRCard from '../../components/QRCard';
 
-export default class extends Component {
+class Friend extends Component {
 
-	pays = {
+/*	pays = {
 		_default: {
 			name: '好友码',
 			color: '#FF9C00',
@@ -69,7 +70,7 @@ export default class extends Component {
 			text: '打开易信扫一扫加好友'
 		}
 	}
-
+*/
 	render() {
 		var href = window.location.href;
 		if(/\/$/.test(href)) {
@@ -79,6 +80,7 @@ export default class extends Component {
 		var ua = navigator.userAgent;
 		var type = '_default';
 		var inApp = true;
+		var { friends } = this.props;
 		if(/MicroMessenger/.test(ua)) {
 			type = 'wx';
 		}else if(/AlipayClient/.test(ua)) {
@@ -97,11 +99,13 @@ export default class extends Component {
 			type = this.props.match.params.type?this.props.match.params.type:'_default';
 			inApp = false;
 		}
-		if(this.pays[type].type==='jump' && inApp) {
-			window.location.href = this.pays[type].url;
+		if(friends[type].type==='jump' && inApp) {
+			window.location.href = friends[type].url;
 			return;
 		}
-		return <QRCard {...this.pays[type]}/>
+		return <QRCard {...friends[type]}/>
 	}
 
 }
+
+export default connect((state)=>{return {friends:state.Data.friend}})(Friend);

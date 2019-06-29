@@ -1,9 +1,10 @@
 import React,{ Component } from 'react';
+import { connect } from 'dva';
 import QRCard from '../../components/QRCard';
 
-export default class extends Component {
+class Pay extends Component {
 
-	pays = {
+/*	pays = {
 		_default: {
 			name: '付款码',
 			color: '#FF9C00',
@@ -36,7 +37,7 @@ export default class extends Component {
 			url: 'https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=860167D064CA02EB75DAA45709080989BD2828AE0C889B951E6BCC8C78BDD045&u=138029887&n=liziyi0914',
 			text: '打开QQ扫一扫支付'
 		}
-	}
+	}*/
 
 	render() {
 		var href = window.location.href;
@@ -47,6 +48,7 @@ export default class extends Component {
 		var ua = navigator.userAgent;
 		var type = '_default';
 		var inApp = true;
+		var { pays } = this.props;
 		if(/MicroMessenger/.test(ua)) {
 			type = 'wx';
 		}else if(/AlipayClient/.test(ua)) {
@@ -57,11 +59,13 @@ export default class extends Component {
 			type = this.props.match.params.type?this.props.match.params.type:'_default';
 			inApp = false;
 		}
-		if(this.pays[type].type==='jump' && inApp) {
-			window.location.href = this.pays[type].url;
+		if(pays[type].type==='jump' && inApp) {
+			window.location.href = pays[type].url;
 			return;
 		}
-		return <QRCard {...this.pays[type]}/>
+		return <QRCard {...pays[type]}/>
 	}
 
 }
+
+export default connect((state)=>{return {pays:state.Data.pay}})(Pay);

@@ -4,6 +4,7 @@ import { Row, Col } from 'antd';
 import router from 'umi/router';
 import Card from '../components/Card';
 import AppIcon from '../components/AppIcon';
+import AppDock from '../components/AppDock';
 
 class Index extends Component {
 	render() {
@@ -42,14 +43,8 @@ class Index extends Component {
 		return (
 			<div>
 				<h1>OneQR</h1>
-				<Card>
-					<h1>Pay</h1>
-					{pays}
-				</Card>
-				<Card>
-					<h1>Friend</h1>
-					{friends}
-				</Card>
+				<AppDock type='Pay'/>
+				<AppDock type='Friend'/>
 			</div>
 		);
 	}

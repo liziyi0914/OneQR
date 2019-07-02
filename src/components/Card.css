@@ -2,10 +2,10 @@
 	margin: 0.45em;
 	padding: 1em;
 	background-color: white;
-	border-width: 1px;
+	border-width: 0px;
 	border-radius: 8px;
 	border-style: solid;
 	border-color: #E8E8E8;
-	filter: drop-shadow(0 2px 2px #EEEEEE);
+	filter: drop-shadow(0 2px 3px #777777);
 }
 

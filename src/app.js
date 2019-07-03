@@ -162,6 +162,15 @@ export const dva = {
 						url: 'https://www.coolapk.com/u/678803?from=qr',
 						text: '打开基佬安扫一扫加好友'
 					},
+					blizzard: {
+						name: '暴雪战网',
+						type: 'Friend',
+						color: '#2E3B5D',
+						icon: 'blizzard',
+						action: 'qr',
+						url: 'lzy2002#51996',
+						text: '打开暴雪战网扫一扫加好友'
+					},
 					yixin: {
 						name: '易信',
 						type: 'Friend',
@@ -170,6 +179,51 @@ export const dva = {
 						action: 'jump',
 						url: 'http://yixin.im/p/NDA0ODEzMS00MDQ4MTMxLTEzNzc1MDExNjQ=',
 						text: '打开易信扫一扫加好友'
+					},
+					twitter: {
+						name: 'Twitter',
+						type: 'Friend',
+						color: '#1DA1F3',
+						icon: 'twitter',
+						action: 'img',
+						url: '//qr.liziyi0914.com/img/twitter.png',
+						text: '打开Twitter扫一扫加好友'
+					},
+					fb: {
+						name: 'Facebook',
+						type: 'Friend',
+						color: '#4167B2',
+						icon: 'facebook',
+						action: 'img',
+						url: '//qr.liziyi0914.com/img/facebook.png',
+						text: '打开Facebook扫一扫加好友'
+					},
+					ins: {
+						name: 'Instagram',
+						type: 'Friend',
+						color: 'linear-gradient(to bottom left, #A207BA , #FE8C33)',
+						icon: 'instagram',
+						action: 'img',
+						url: '//qr.liziyi0914.com/img/instagram.png',
+						text: '打开Instagram扫一扫加好友'
+					},
+					snapchat: {
+						name: 'Snapchat',
+						type: 'Friend',
+						color: '#FFFC00',
+						icon: 'snapchat',
+						action: 'img',
+						url: '//qr.liziyi0914.com/img/snapchat.png',
+						text: '打开Snapchat扫一扫加好友'
+					},
+					line: {
+						name: 'Line',
+						type: 'Friend',
+						color: '#4ECD00',
+						icon: 'line',
+						action: 'qr',
+						url: 'https://line.me/ti/p/Fn14z7lVIq',
+						text: '打开Line扫一扫加好友'
 					}
 				}
 			}

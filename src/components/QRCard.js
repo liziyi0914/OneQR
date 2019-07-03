@@ -34,13 +34,16 @@ class QRCard extends Component {
 	}
 
 	render() {
-		var { icon,color,name,text,url,type } = this.props;
+		var { icon,color,name,text,url,type,action } = this.props;
 		var appDock = (
+			<div style={{position:'absolute',zIndex:99,right:'1em',left:'1em'}}>
 				<AppDock type={type} showTitle={false}/>
+			</div>
 		);
+		var imgSrc = action==='img'?url:"https://api.qrserver.com/v1/create-qr-code/?data="+encodeURIComponent(url)+"&size=250x250";
 		return (
-		<div className={styles.qrcard} style={{height:'100%',backgroundColor:color}} onClick={this.closeMenu}>
-			<div className={styles.qrcard_title} style={{height:'5.5em',fontSize:24,backgroundColor:'white'}}>
+		<div className={styles.qrcard} style={{background:color}} onClick={this.closeMenu}>
+			<div className={styles.qrcard_title}>
 				<AppIcon name={name} icon={icon} color={color} onClick={this.toggleMenu}/>
 				<Animate
 			          transitionName="fade"
@@ -50,7 +53,7 @@ class QRCard extends Component {
 				</Animate>
 			</div>
 			<div className={styles.qrcard_content}>
-				<img src={"https://api.qrserver.com/v1/create-qr-code/?data="+encodeURIComponent(url)+"&size=250x250"} alt="" title="" style={{backgroundColor:'white',margin:'1.25em',padding:'1em'}} />
+				<img src={imgSrc} alt="" title="" style={action==='img'?null:{background:'white'}} className={styles.qrcode_img}/>
 				<div style={{color:'white'}}>{text}</div>
 			</div>
 		</div>);

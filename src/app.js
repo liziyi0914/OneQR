@@ -78,7 +78,125 @@ export const dva = {
 						action: 'qr',
 						url: 'http://m.bestpay.com.cn/#/apa/lz4opAWXk6aYD2XCm0face2face',
 						text: '打开翼支付扫一扫支付'
-					}
+					},
+					btc: {
+						name: 'BTC',
+						type: 'Pay',
+						color: '#F7931B',
+						icon: 'BTC',
+						action: 'ecoin',
+						url: '18BQg3PKamaEybYG9wk3kfyQx1VtUPhTAc',
+						text: ''
+					},
+					usdt: {
+						name: 'USDT',
+						type: 'Pay',
+						color: '#21A077',
+						icon: 'USDT',
+						action: 'ecoin',
+						url: '18BQg3PKamaEybYG9wk3kfyQx1VtUPhTAc',
+						text: ''
+					},
+					eth: {
+						name: 'ETH',
+						type: 'Pay',
+						color: '#4955B7',
+						icon: 'ETH',
+						action: 'ecoin',
+						url: '0x1af9dbb58d20cca0344f559080cda36f8b1e11dc',
+						text: ''
+					},
+					ltc: {
+						name: 'LTC',
+						type: 'Pay',
+						color: '#A1A2A7',
+						icon: 'LTC',
+						action: 'ecoin',
+						url: 'LTH6ic5GwtMTkRzsQRuZ5Qn4LoipWy3LgN',
+						text: ''
+					},
+					ADA: {
+						name: 'ADA',
+						type: 'Pay',
+						color: '#3368D0',
+						icon: 'ADA',
+						action: 'ecoin',
+						url: 'DdzFFzCqrhsm9Bjc8RTVXdT7mGuMsumEwfJZZLfVtU8PtbCNxcr1UMkNP2ZKBNdQZpATJXxxs3Uf15uxKGd6PoZ5CQXhJFUNQCqwBm5T',
+						text: ''
+					},
+					bch: {
+						name: 'BCH',
+						type: 'Pay',
+						color: '#18BC9A',
+						icon: 'BCH',
+						action: 'ecoin',
+						url: '1MRuPJtn5GwzzVKDpSHn3PFXNyRpNDyHvp',
+						text: ''
+					},
+					trx: {
+						name: 'TRX',
+						type: 'Pay',
+						color: '#C72A35',
+						icon: 'TRX',
+						action: 'ecoin',
+						url: 'TJkEHCZqpZHtLgFsVkR9Ruw6DhPSoy9rAQ',
+						text: ''
+					},
+					atom: {
+						name: 'ATOM',
+						type: 'Pay',
+						color: '#2D2D32',
+						icon: 'ATOM',
+						action: 'ecoin',
+						url: 'cosmos10c6dgvfk4xrlaregnshsf277yxq4pp8wf6ps2m',
+						text: ''
+					},
+					ont: {
+						name: 'ONT',
+						type: 'Pay',
+						color: '#00A7C1',
+						icon: 'ONT',
+						action: 'ecoin',
+						url: 'AFtcnWgCuSbNxSVdFZUNEad5qVHbRiENDy',
+						text: ''
+					},
+					ong: {
+						name: 'ONG',
+						type: 'Pay',
+						color: '#F6F5FB',
+						textColor: '#3AAEC2',
+						icon: 'ONG',
+						action: 'ecoin',
+						url: 'AFtcnWgCuSbNxSVdFZUNEad5qVHbRiENDy',
+						text: ''
+					},
+					bsv: {
+						name: 'BSV',
+						type: 'Pay',
+						color: '#E7B321',
+						icon: 'BSV',
+						action: 'ecoin',
+						url: '1MRuPJtn5GwzzVKDpSHn3PFXNyRpNDyHvp',
+						text: ''
+					},
+					etc: {
+						name: 'ETC',
+						type: 'Pay',
+						color: '#01C853',
+						icon: 'ETC',
+						action: 'ecoin',
+						url: '0x41709eb24a6f986ffc79a8810139ed5095d0d4d4',
+						text: ''
+						},
+					ht: {
+						name: 'HT',
+						type: 'Pay',
+						color: '#38416C',
+						icon: 'HT',
+						action: 'ecoin',
+						url: '0x1af9dbb58d20cca0344f559080cda36f8b1e11dc',
+						text: ''
+					},
 				},
 				Friend: {
 					_default: {

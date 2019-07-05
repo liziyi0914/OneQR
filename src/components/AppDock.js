@@ -24,7 +24,7 @@ class AppDock extends Component {
 			return ()=>router.push('/'+type+n);
 		};
 		for(let i in apps){
-			tmp.push(<Col span={6} onClick={Jump(i)} style={{fontSize:'1em'}}><AppIcon name={apps[i].name} icon={apps[i].icon} color={apps[i].color}/></Col>);
+			tmp.push(<Col span={6} onClick={Jump(i)} style={{fontSize:'1em'}}><AppIcon name={apps[i].name} icon={apps[i].icon} color={apps[i].color} textColor={apps[i].textColor || 'white'}/></Col>);
 			if(tmp.length%4===0){
 				arrs.push(<Row>{tmp}</Row>);
 				tmp = [];

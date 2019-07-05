@@ -1,7 +1,10 @@
 import { Component } from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Button, message } from 'antd';
 import Animate from 'rc-animate';
 import AppIcon from './AppIcon';
 import AppDock from './AppDock';
+import Card from './Card';
 import styles from './QRCard.css';
 
 class QRCard extends Component {
@@ -35,6 +38,7 @@ class QRCard extends Component {
 
 	render() {
 		var { icon,color,name,text,url,type,action } = this.props;
+		var textColor = this.props.textColor || 'white';
 		var appDock = (
 			<div style={{position:'absolute',zIndex:99,right:'1em',left:'1em'}}>
 				<AppDock type={type} showTitle={false}/>
@@ -44,7 +48,7 @@ class QRCard extends Component {
 		return (
 		<div className={styles.qrcard} style={{background:color}} onClick={this.closeMenu}>
 			<div className={styles.qrcard_title}>
-				<AppIcon name={name} icon={icon} color={color} onClick={this.toggleMenu}/>
+				<AppIcon name={name} icon={icon} color={color} textColor={textColor} onClick={this.toggleMenu}/>
 				<Animate
 			          transitionName="fade"
 			          transitionAppear
@@ -54,7 +58,7 @@ class QRCard extends Component {
 			</div>
 			<div className={styles.qrcard_content}>
 				<img src={imgSrc} alt="" title="" style={action==='img'?null:{background:'white'}} className={styles.qrcode_img}/>
-				<div style={{color:'white'}}>{text}</div>
+			{action==='ecoin'?<Card>{url}<CopyToClipboard text={url} onCopy={()=>{message.success('复制成功')}}><Button type="link" shape="circle" icon="copy"/></CopyToClipboard></Card>:<div style={{color:'white'}}>{text}</div>}
 			</div>
 		</div>);
 	}

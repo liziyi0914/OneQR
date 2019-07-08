@@ -5,6 +5,9 @@ import QRCard from '../../components/QRCard';
 class Friend extends Component {
 
 	render() {
+		this.props.dispatch({
+			type: 'Data/updateURL'
+		});
 		var href = window.location.href;
 		if(/\/$/.test(href)) {
 			window.location.href = href.substring(0,href.length-1);
@@ -14,6 +17,10 @@ class Friend extends Component {
 		var type = '_default';
 		var inApp = true;
 		var { friends } = this.props;
+		if(this.props.match.params.type!==undefined) {
+			type = this.props.match.params.type;
+			return <QRCard {...friends[type]}/>
+		}
 		if(/MicroMessenger/.test(ua)) {
 			type = 'wx';
 		}else if(/AlipayClient/.test(ua)) {

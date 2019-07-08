@@ -17,6 +17,10 @@ class Pay extends Component {
 		var type = '_default';
 		var inApp = true;
 		var { pays } = this.props;
+		if(this.props.match.params.type!==undefined) {
+			type = this.props.match.params.type;
+			return <QRCard {...pays[type]}/>
+		}
 		if(/MicroMessenger/.test(ua)) {
 			type = 'wx';
 		}else if(/AlipayClient/.test(ua)) {

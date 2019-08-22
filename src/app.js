@@ -310,7 +310,7 @@ export const dva = {
 					fb: {
 						name: 'Facebook',
 						type: 'Friend',
-						color: '#4167B2',
+						color: 'linear-gradient(#18AEFF, #0165E2)',
 						icon: 'facebook',
 						action: 'img',
 						url: '//qr.liziyi0914.com/img/facebook.png',
@@ -319,7 +319,7 @@ export const dva = {
 					ins: {
 						name: 'Instagram',
 						type: 'Friend',
-						color: 'linear-gradient(to bottom left, #A207BA , #FE8C33)',
+						color: 'linear-gradient(to bottom left, #A207BA, #FE8C33)',
 						icon: 'instagram',
 						action: 'img',
 						url: '//qr.liziyi0914.com/img/instagram.png',
